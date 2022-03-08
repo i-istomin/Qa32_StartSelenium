@@ -95,14 +95,25 @@ public class StartPhoneBook {
         wd.findElement(By.cssSelector("div"));
         wd.findElement(By.cssSelector("a"));//byTagName
 
+        wd.findElement(By.xpath("//div"));
+        wd.findElement(By.xpath("//a"));//   /html/body/div/div/a
+
         //byClassName
         wd.findElement(By.cssSelector(".login_login__3EHKB"));// -> cherez tochku : ".login_login__3EHKB"
         wd.findElement(By.cssSelector(".container"));
+
+        wd.findElement(By.xpath("//*[@class='login_login__3EHKB']")); //class:attribute
+
+
         //byID
         wd.findElement(By.cssSelector("#root")); //  -> cherz reshetku: "$#root"
-
         // attribut pishetsia cherez kvadratnye skobki [...]
         // ID & class toje attributy i ih tohno mojno iskat cherez [...]--> [id="root"]
+
+
+        wd.findElement(By.xpath("//*[@id='root']"));
+
+
 
 
         //Attributes
@@ -115,6 +126,20 @@ public class StartPhoneBook {
         // ^*= nachinaetsia
         // $=zakanchivaetisia
         // *= soderjit
+
+        wd.findElement(By.xpath("//*[contains(@placeholder,'ss')]"));//attribute=@placeholder    znachenie='ss'
+        wd.findElement(By.xpath("//*[starts-with(@placeholder,'Pa')]"));
+
+
+
+        wd.findElement(By.xpath("//*[@placeholder]"));
+        wd.findElement(By.xpath("//*[@placeholder='Email']"));
+        wd.findElement(By.xpath("//*[@placeholder='Password']"));
+
+        wd.findElement(By.xpath("//button[text()=' Login']")); //vizivam funkziu kak text// tut proveriaet tolko button s tekstom login
+        wd.findElement(By.xpath("//*[text()=' Login']")); //tut budet iskatsia login vezde
+
+
 
     }
 }
