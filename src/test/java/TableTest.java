@@ -136,4 +136,102 @@ Assert.assertEquals(textMessage,"Clicked by Item 1");
 
     }
 
+
+    @Test
+    public void HomeworkXPath() {
+        wd = new ChromeDriver();
+        wd.manage().window().maximize();
+        System.setProperty("webdriver.chrome.driver", "/home/i-istomin/TelRan/SYSTEMS/Qa32_StartSelenium/chromedriver");
+        wd.navigate().to("file:///home/i-istomin/Downloads/index.html");
+
+        //item1
+        WebElement item1=wd.findElement(By.xpath("//*[@id='nav']//li[1]"));
+        WebElement item1_1=wd.findElement(By.xpath("//a[@href='#item1']"));
+       WebElement item1_2=wd.findElement(By.xpath("//*[contains(@href,'1')]"));
+     //   WebElement item1_3=wd.findElement(By.xpath("//a[contains(@class,'nav-item') and contains(@href='#item1')]"));
+      WebElement item1_5=wd.findElement(By.xpath("//*[text()='Item 1']"));
+
+        //item2
+        WebElement item2=wd.findElement(By.xpath("//*[@id='nav']//li[2]"));
+        WebElement item2_1=wd.findElement(By.xpath("//a[@href='#item2']"));
+        WebElement item2_2=wd.findElement(By.xpath("//*[contains(@href,'2')]"));
+        WebElement item2_3=wd.findElement(By.xpath("//*[text()='Item 2']"));
+
+        //item3
+        WebElement item3=wd.findElement(By.xpath("//*[@id='nav']//li[3]"));
+        WebElement item3_1=wd.findElement(By.xpath("//a[@href='#item3']"));
+        WebElement item3_2=wd.findElement(By.xpath("//*[contains(@href,'3')]"));
+        WebElement item3_3=wd.findElement(By.xpath("//*[text()='Item 3']"));
+
+        //item4
+        WebElement item4=wd.findElement(By.xpath("//*[@id='nav']//li[last()]"));
+        WebElement item4_1=wd.findElement(By.xpath("//a[@href='#item4']"));
+        WebElement item4_2=wd.findElement(By.xpath("//*[contains(@href,'4')]"));
+        WebElement item4_3=wd.findElement(By.xpath("//*[text()='Item 4']"));
+
+        //placeholder
+        WebElement placeholder=wd.findElement(By.xpath("//*[@id='form1']//input[1]"));
+        WebElement placeholder_1=wd.findElement(By.xpath("//*[@placeholder='Type your name']"));
+        WebElement placeholder_2=wd.findElement(By.xpath("//*[@name='name']"));
+
+
+        //output
+        WebElement output=wd.findElement(By.xpath("//*[@id='form1']//input[2]"));
+        WebElement output_1=wd.findElement(By.xpath("//*[@placeholder='Type your surename']"));
+        WebElement output_2=wd.findElement(By.xpath("//*[@name='surename']"));
+        WebElement output_3=wd.findElement(By.xpath("//*[contains(@placeholder,'surename')]"));
+
+
+        //button
+        WebElement button=wd.findElement(By.xpath("//*[@id='form1']//input[last()]"));
+        WebElement button_2=wd.findElement(By.xpath("//*[@class='btn']"));
+        WebElement button_3=wd.findElement(By.xpath("//*[text()='Send']"));
+
+
+//table
+       WebElement europe_1=wd.findElement(By.xpath("//*[text()='Europe']"));
+        WebElement europe_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[1]//td[1]"));
+
+        WebElement asia=wd.findElement(By.xpath("//*[text()='Asia']"));
+        WebElement asia_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[1]//td[2]"));
+
+        WebElement america=wd.findElement(By.xpath("//*[text()='America']"));
+        WebElement america_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[1]//td[last()]"));
+
+        WebElement ukraine=wd.findElement(By.xpath("//*[text()='Ukraine']"));
+        WebElement ukraine_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[2]//td[1]"));
+
+        WebElement israel=wd.findElement(By.xpath("//*[text()='Israel']"));
+        WebElement israel_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[2]//td[2]"));
+
+        WebElement usa=wd.findElement(By.xpath("//*[text()='USA']"));
+        WebElement usa_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[2]//td[last()]"));
+
+        WebElement germany=wd.findElement(By.xpath("//*[text()='Germany']"));
+        WebElement germany_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[3]//td[1]"));
+
+        WebElement russia=wd.findElement(By.xpath("//*[text()='Russia']"));
+        WebElement russia_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[3]//td[2]"));
+
+        WebElement canada=wd.findElement(By.xpath("//*[text()='Canada']"));
+        WebElement canada_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[3]//td[last()]"));
+
+
+        WebElement poland=wd.findElement(By.xpath("//*[text()='Poland']"));
+        WebElement poland_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[last()]//td[1]"));
+
+        WebElement china=wd.findElement(By.xpath("//*[text()='Chine']"));
+        WebElement china_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[last()]//td[2]"));
+
+        WebElement mexico=wd.findElement(By.xpath("//*[text()='Mexico']"));
+        WebElement mexico_2=wd.findElement(By.xpath("//*[@id='country-table']//tr[last()]//td[last()]"));
+
+
+        //alertmessag2
+        WebElement square=wd.findElement(By.xpath("//*[@id='alert']"));
+        WebElement square_1=wd.findElement(By.xpath("//*[@class='message']"));
+
+
+    }
+
 }
